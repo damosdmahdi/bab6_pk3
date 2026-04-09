@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadDataFromProvider() {
         val list = mutableListOf<Mahasiswa>()
-        // Alamat URI harus sama dengan Aapplication [cite: 334, 1119]
         val contentUri = Uri.parse("content://com.example.aapplication.provider/mahasiswa")
 
         contentResolver.query(contentUri, null, null, null, "nama ASC")?.use { cursor ->
